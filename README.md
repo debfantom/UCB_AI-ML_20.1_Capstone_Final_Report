@@ -1,10 +1,15 @@
 # UCB_AI-ML_20.1_Capstone_Initial_Report_EDA
-
+---
+This repository contains:
+- **book_clustering_EDA.ipynb**: Jupyter Notebook containing exploratory data analysis, feature engineering, model comparison, and tuning.
+- **data/**: Folder containing the dataset used in this project. 
+- **images/**: Folder with generated plots and visualizations.
+---
 ## 🧠 Executive Summary
 This project investigates how user behavior around book ratings can be used to uncover distinct groups of readers using unsupervised learning. The focus is on clustering users into interpretable segments to enable more personalized book recommendations and strategic content targeting.
 
 ## 🎯 Rationale
-Understanding how readers interact with books through their ratings can lead to more engaging digital experiences. This type of analysis allows for data-driven content recommendations and better user segmentation in publishing and educational platforms.
+**Why this matters**: Understanding how readers interact with books through their ratings can lead to more engaging digital experiences. This type of analysis allows for data-driven content recommendations and better user segmentation in publishing and educational platforms.
 
 ## ❓ Research Question
 Can we cluster users based on interpretable features extracted from their book rating behavior to uncover distinct reader segments?
