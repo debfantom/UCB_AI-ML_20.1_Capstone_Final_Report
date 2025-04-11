@@ -9,7 +9,7 @@ This repository contains:
 This project investigates how user behavior around book ratings can be used to uncover distinct groups of readers using unsupervised learning. The focus is on clustering users into interpretable segments to enable more personalized book recommendations and strategic content targeting.
 
 ## 🎯 Rationale
-**Why this matters**: Understanding how readers interact with books through their ratings can lead to more engaging digital experiences. This type of analysis allows for data-driven content recommendations and better user segmentation in publishing and educational platforms.
+**Why this matters**: Understanding user behavior is critical for strategic decision-making in digital content platforms. By clustering users with interpretable, behavior-based features, this project can uncover actionable insights. These segments can guide product development, content strategy, and marketing priorities—enabling more focused investments and personalized user experiences. Without this analysis, platforms risk missing key engagement drivers and allocating resources toward generic strategies that may not resonate.
 
 ## ❓ Research Question
 Can we cluster users based on interpretable features extracted from their book rating behavior to uncover distinct reader segments?
@@ -42,8 +42,9 @@ out of 271379 books:
 - Clustering using unsupervised learning techniques such as K-Means and DBSCAN
 - Visual exploration and interpretation of user clusters
 
+
 ## 🧭 Expected Results/Results
-The project aims to identify user clusters based on rating behaviors, such as preferences for certain genres or rating patterns (e.g., frequent raters vs. rare raters). The clusters will be visualized to evaluate separation and meaning, supporting potential personalized strategies in content platforms.
+The project aims to identify user clusters based on rating behaviors, such as preferences for certain genres or rating patterns (e.g., frequent raters vs. rare raters). The clusters will be visualized to evaluate separation and meaning, supporting potential personalized strategies in content platforms. 
 
 #### Outline of project
 
