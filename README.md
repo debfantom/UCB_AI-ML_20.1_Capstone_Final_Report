@@ -15,12 +15,26 @@ This project investigates how user behavior around book ratings can be used to u
 Can we cluster users based on interpretable features extracted from their book rating behavior to uncover distinct reader segments?
 
 ## 💾 Data Sources 
-The dataset is sourced from Kaggle: [Book Recommendation System with Machine Learning](https://www.kaggle.com/code/midouazerty/book-recommendation-system-with-machine-learning/input). It contains:
-- User IDs
-- Book ratings
-- Book metadata (titles, authors, etc.)
+The dataset is sourced from Kaggle: [Book-Crossing Dataset](https://www.kaggle.com/datasets/somnambwl/bookcrossing-dataset?select=Books.csv). It contains:
 
-We're using a preprocessed version (that combines three CSV files into one) saved as a zipped CSV (`Preprocessed_data.csv.zip`).
+● Users.csv - Contains the users. Note that user IDs (User-ID) have been anonymized and map to integers. Age is provided if available.
+
+● Books.csv - Identified by their respective ISBN. Book metadata, such as Book-Title, Book-Author, Year-Of-Publication, Publisher, were obtained from Amazon Web Services. 
+
+● Ratings.csv - Contains the book rating information (User-ID, ISBN, Rating). 
+
+Note from the datacard:
+
+out of 278859 users:
+- only 99053 rated at least 1 book
+- only 43385 rated at least 2 books.
+- only 12306 rated at least 10 books.
+  
+out of 271379 books:
+- only 270171 are rated at least once.
+- only 124513 have at least 2 ratings.
+- only 17480 have at least 10 ratings.
+
 
 ## 🧪 Methodology
 - Feature extraction from book ratings (e.g., average rating, frequency)
