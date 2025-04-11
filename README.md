@@ -15,7 +15,7 @@ The dataset is sourced from Kaggle: [Book Recommendation System with Machine Lea
 - Book ratings
 - Book metadata (titles, authors, etc.)
 
-We're using a preprocessed version (that combines the 3 csv files into one) saved as a zipped CSV (`Preprocessed_data.csv.zip`).
+We're using a preprocessed version (that combines three CSV files into one) saved as a zipped CSV (`Preprocessed_data.csv.zip`).
 
 ## 🧪 Methodology
 - Feature extraction from book ratings (e.g., average rating, frequency)
