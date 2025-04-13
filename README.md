@@ -36,11 +36,8 @@ out of 271379 books:
 - only 17480 have at least 10 ratings.
 
 
-## 🧪 Methodology
-- Feature extraction from book ratings (e.g., average rating, frequency)
-- Dimensionality reduction using SFS or PCA
-- Clustering using unsupervised learning techniques such as K-Means and DBSCAN
-- Visual exploration and interpretation of user clusters
+Under
+
 
 
 ## 🧭 Expected Results/Results
