@@ -15,30 +15,42 @@ This project investigates how user behavior around book ratings can be used to u
 Can we cluster users based on interpretable features extracted from their book rating behavior to uncover distinct reader segments?
 
 ## 💾 Data Sources 
-The dataset is sourced from Kaggle: [Book-Crossing Dataset](https://www.kaggle.com/datasets/somnambwl/bookcrossing-dataset?select=Books.csv). It contains:
+The dataset is sourced from Kaggle: [Book Crossing Dataset](https://www.kaggle.com/datasets/syedjaferk/book-crossing-dataset?select=BX-Book-Ratings.csv). Collected by Cai-Nicolas Ziegler in a 4-week crawl (August / September 2004) from the Book-Crossing community with kind permission from Ron Hornbaker, CTO of Humankind Systems. Contains 278,858 users (anonymized but with demographic information) providing 1,149,780 ratings (explicit / implicit) about 271,379 books. It contains:
 
-● Users.csv - Contains the users. Note that user IDs (User-ID) have been anonymized and map to integers. Age is provided if available.
+● BX-Users- Contains the users. Note that user IDs (User-ID) have been anonymized and map to integers. Age and location is provided if available.
 
-● Books.csv - Identified by their respective ISBN. Book metadata, such as Book-Title, Book-Author, Year-Of-Publication, Publisher, were obtained from Amazon Web Services. 
+● BX-Books - Identified by their respective ISBN. Book metadata, such as Book-Title, Book-Author, Year-Of-Publication, Publisher, were obtained from Amazon Web Services. 
 
-● Ratings.csv - Contains the book rating information (User-ID, ISBN, Rating). 
+● BX-Book-Ratings - Contains the book rating information (User-ID, ISBN, Rating). 
 
-Note from the datacard:
+---
 
-out of 278859 users:
-- only 99053 rated at least 1 book
-- only 43385 rated at least 2 books.
-- only 12306 rated at least 10 books.
-  
-out of 271379 books:
-- only 270171 are rated at least once.
-- only 124513 have at least 2 ratings.
-- only 17480 have at least 10 ratings.
+### 🧠 Hypotheses
 
+1. **Behavioral features are more effective than static demographics for clustering and age group prediction.**  
+   Patterns in reading volume, rating behavior, and title preferences will yield more meaningful user segments and support more accurate age group imputation, which can then guide personalization and messaging.
 
-Under
+2. **Title themes (i.e., common words in book titles) can indicate future user interest.**  
+   Users are more likely to engage with books that share title themes with their previously read or highly rated books. Identifying these patterns enables content-based personalization, even for users with limited prior ratings.
 
+---
 
+### ✅ How We’ll Evaluate These
+
+- For Hypothesis 1:
+  - Train a model to predict `age_group` using only behavior-based features
+  - Evaluate performance using holdout test data from users with valid age
+  - Assess how well behavioral clusters align with age group patterns
+
+- For Hypothesis 2:
+  - Split each user’s interaction history into train/test sets
+  - Derive top title words from the training set
+  - Measure how often test-set titles include those words
+  - Evaluate lift over random or baseline match rates
+
+---
+
+Would you like this inserted into a `Hypotheses & Evaluation` section of your README or kept separate for now?
 
 ## 🧭 Expected Results/Results
 The project aims to identify user clusters based on rating behaviors, such as preferences for certain genres or rating patterns (e.g., frequent raters vs. rare raters). The clusters will be visualized to evaluate separation and meaning, supporting potential personalized strategies in content platforms. 
