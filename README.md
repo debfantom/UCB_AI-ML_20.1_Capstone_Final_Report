@@ -44,9 +44,9 @@ Integrate the 3 data files and explore and assess the structure, completeness, a
 - Clean and structure the raw dataset
 - Parse and standardize book metadata (author, publisher, pub year)
 - Parse location into city, region, country (when available)
-- Apply TF-IDF to title words (Book_titles excluding stop words) with N-grams = 1,2
+- Apply TF-IDF to title words (lemmatized book titles excluding stop words) with N-grams = 1,2
 - Engineer user-level features (examples below):
-  - Reading and rating counts
+  - Reading and rating counts and derivative features
   - Publication era preferences
   - Title-word extraction:
     - `interest_title_words` (all books)
@@ -86,7 +86,17 @@ Integrate the 3 data files and explore and assess the structure, completeness, a
 
 ---
 
-## 🧭 Results
+## 🧭 Results/Learnings
+- **📊 Exploratory Data Analysis (EDA)**
+  - Many of the readers that provided valid ages were "Early Adults" ages 26-40
+  - A significant portion of user interactions in the dataset lack explicit feedback — 63% of ratings are zero (647K/1,031K), indicating implicit interactions or unrated activity. This means that fewer than half of all book interactions result in a true rating (1–10).
+  - Since the vast majority of readers are from the US, I focused the analysis on U.S. users to reduce geographic imbalance. This also allowed me to use latitude and longitude for US cities for meaningful location-based clustering.
+  - Interestingly, the most read book was "Wild Animus" by Rich Shapero despite the fact that it had mediocre rating of 4.4/10.  This book has an interesting backstory 
+- ** 
+
+
+  ![My Image](images/exploratory_histograms.png)
+  ![My Image](images/Top50Distributions.png)
 
 
 ## ✅ Next Steps
