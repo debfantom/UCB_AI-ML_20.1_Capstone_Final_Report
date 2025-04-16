@@ -123,7 +123,7 @@ Integrate the 3 data files and explore and assess the structure, completeness, a
   
 
 - **🌱 Disconnected Dabblers (Cluster 3)**  
-  Lightest engagement group with the lowest read and rating counts. Average ratings are low (3.28), possibly due to confusion, ambivalence, or non-engagement. Their most read book is the niche "Wild Animus" by Rich Shapero which purportedly was a Book Crossing give-a-way.
+  Representing about one-quarter of users, this group has the lightest engagement with the lowest read and rating counts. Average ratings are low (3.28), possibly due to confusion, ambivalence, or non-engagement. Their most read book is the niche "Wild Animus" by Rich Shapero which purportedly was a Book Crossing give-a-way.
   - **Theme**: *Experimental Samplers*
     - **Interest Words**: mystery, love, romance, woman, guide, story, world  
     - **Favorite Words**: mystery, guide, love, novel, world, time, secret, classic
