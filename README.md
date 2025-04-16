@@ -88,20 +88,75 @@ Integrate the 3 data files and explore and assess the structure, completeness, a
 
 ## 🧭 Results/Learnings
 - **📊 Exploratory Data Analysis (EDA)**
-  - Many of the readers that provided valid ages were "Early Adults" ages 26-40
-  - A significant portion of user interactions in the dataset lack explicit feedback — 63% of ratings are zero (647K/1,031K), indicating implicit interactions or unrated activity. This means that fewer than half of all book interactions result in a true rating (1–10).
+  - Many of the readers that provided valid ages were "Early Adults" ages 26-40. I dropped over a quarter of user interactions that did not have a valid age.  In the baseline cluster analysis, the mean of age only varied about 2.5 years between the clusters.
+  - A significant portion of user interactions in the dataset lack explicit feedback — 63% of ratings are zero (647k/1031k), indicating implicit interactions or unrated activity. This means that fewer than half of all book interactions result in a true rating (1–10).
   - Since the vast majority of readers are from the US, I focused the analysis on U.S. users to reduce geographic imbalance. This also allowed me to use latitude and longitude for US cities for meaningful location-based clustering.
-  - Interestingly, the most read book was "Wild Animus" by Rich Shapero despite the fact that it had mediocre rating of 4.4/10.  This book has an interesting backstory 
-- ** 
-
-
+  - Interestingly, the most read book was "Wild Animus" by Rich Shapero despite the fact that it had mediocre rating of 4.4/10.  This book has an interesting [backstory](https://litreactor.com/columns/what-the-hell-is-wild-animus).  I may want to filter out these records in the future.
   ![My Image](images/exploratory_histograms.png)
   ![My Image](images/Top50Distributions.png)
 
+- **🎯 Cluster Analysis Baseline K-Means Model**
+  - The sillouette score of the baseline model is .403 with k=3.  This is a decent score but >88% of users are in a single cluster.
+  - At k=4, the sillouette score drops to .144.  The largest cluster contains 66% of users.
+  - The PCA projection (for k=4) reveals that most user clusters are relatively close together, with limited visual separation. This suggests that the clusters may capture subtle variations in user behavior rather than strongly distinct personas. 
+ ![My Image](images/userclustersviaPCA.png)
+
+### 🧠 Cluster Summary & Personas
+
+| Cluster | % of Users | Avg Age | Read Count | Rated High Count | Avg Rating | Author Diversity | Publisher Diversity | Favorite Era | Favorite Author | Most Read Book     | Persona Name        |
+|--------:|------------|--------:|------------|------------------:|------------:|------------------:|---------------------:|--------------|-----------------|----------------------|---------------------|
+| 1       | 66.0%      | 38.04   | 4.98       | 1.64              | 7.78        | 0.98             | 0.96                | 2000s        | Dan Brown       | A Painted House     | 📚 **Casual Browsers** |
+| 3       | 24.0%      | 36.80   | 1.81       | 0.00              | 3.28        | 0.99             | 0.99                | 2000s        | Rich Shapero    | Wild Animus         | 🌱 **Disconnected Dabblers** |
+| 0       | 9.7%       | 36.31   | 100.95     | 20.82             | 7.79        | 0.70             | 0.54                | 1990s        | Stephen King    | 1st to Die: A Novel | 🔍 **Engaged Explorers** |
+| 2       | 0.3%       | 39.09   | 1621.58    | 165.51            | 7.97        | 0.65             | 0.23                | 1990s        | Nora Roberts    | 1984                | 📖 **Super Readers** |
+
+---
+
+### ✍️ Persona Descriptions
+
+- **📚 Casual Browsers (Cluster 1)**  
+  The largest group, representing two-thirds of users. They read infrequently but have relatively high author and publisher diversity, suggesting wide but shallow exploration. Their preferences include mainstream authors like Dan Brown and books from the 2000s.
+  - **Theme**: *Book Club Readers & Escapists*  
+     - **Interest Words**: life, mystery, guide, love, time, classic, club  
+     - **Favorite Words**: life, club, mystery, time, love, woman  
+  - **Profile**: Light but curious readers leaning toward popular, accessible books often found in book clubs or lifestyle picks.
+  
+
+- **🌱 Disconnected Dabblers (Cluster 3)**  
+  Lightest engagement group with the lowest read and rating counts. Average ratings are low (3.28), possibly due to confusion, ambivalence, or non-engagement. Their most read book is the niche "Wild Animus" by Rich Shapero which purportedly was a Book Crossing give-a-way.
+  - **Theme**: *Experimental Samplers*
+    - **Interest Words**: mystery, love, romance, woman, guide, story, world  
+    - **Favorite Words**: mystery, guide, love, novel, world, time, secret, classic
+  - **Profile**: Sporadic readers exploring niche or abstract titles with limited rating engagement or clear preferences.
+
+
+- **🔍 Engaged Explorers (Cluster 0)**  
+  Small but active group, reading around 100 books and rating many with high scores. They explore broadly (moderate diversity) and enjoy 1990s-era books and authors like Stephen King.
+  - **Theme**: *Classic Story Seekers*    
+    - **Interest Words**: mystery, love, romance, woman, guide, story, world  
+    - **Favorite Words**: mystery, guide, love, novel, world, time, secret, classic  
+  - **Profile**: Avid readers of narrative-rich fiction, especially mystery and romance. Favor classic, emotionally engaging titles.
+
+- **📖 Super Readers (Cluster 2)**  
+  A rare but standout group—only 0.3% of users—who exhibit extreme engagement: reading over 1,600 books and rating more than 160 highly. Their preferences are tightly focused (low diversity), with high affinity for authors like Nora Roberts and iconic titles like *1984*.
+  - **Theme**: *Romance Devotees* 
+    - **Interest Words**: mystery, love, romance, story, silhouette, book  
+    - **Favorite Words**: mystery, guide, classic, love, tale, world, book  
+  - **Profile**: Exceptionally high-volume readers with strong affinity for romantic and serialized fiction.
+
+---
+---
+
 
 ## ✅ Next Steps
-- **Feature Engineering Refinement**  
-  Review features for opportunties to iterate
+- **Feature Engineering & Filtering Refinement**  
+  - Consider eliminating Age as a modeling feature and allow the additional 25+% of records back into the analysis.  Using age_quality as an indicator of engagement (providing age shows higher engagement/trust than not providing age) could be a more distinctive feature for modeling. Age will still be available for persona analysis.
+  - Alternatively, consider only using records that included an explicite rating if implicite ratings introduce noise. 
+  - Consider eliminating some features that may be redundant (ex: Publisher Diversity).
+  - Consider filtering out "Wild Animus" records and eliminating severe outliers.
+  - Super Reader - Cluster 2 group averaged 1600 books per reader over 4 weeks which warrants further investigation.
+  - Refine the text processing methodology to mine further insight using book titles.  
+
   
 - **Model Exploration**  
   Evaluate alternative clustering algorithms such as DBSCAN to compare with KMeans results.
@@ -109,8 +164,8 @@ Integrate the 3 data files and explore and assess the structure, completeness, a
 - **Hyperparameter Tuning**  
   Optimize the number of clusters (`k`) using grid search, test against different feature subsets.
 
-- **Cluster Interpretation & Labeling**  
-  Add richer profiling of clusters (e.g., top authors, preferred eras, average rating patterns) to support clearer persona labels.
+- **Cluster Profiling**  
+  Add richer profiling of clusters to support clearer persona labels and potential recommendations to various stakeholder groups.
 
 - **Downstream Applications**  
   Explore opportunities to experiment utilizing the holdout data set and new learnings.
