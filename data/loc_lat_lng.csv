@@ -1,0 +1,111 @@
+Location,state,state_clean,city,lat,lng
+"phoenix, , usa",,,phoenix,33.4482,-112.0777
+"duncanville, alabama, usa",alabama,al,duncanville,33.063,-87.4465
+"ft huachuca, arizona, usa",arizona,az,ft huachuca,31.5552,-110.3499
+"higley, arizona, usa",arizona,az,higley,33.322922,-111.719613
+"bay area, california, usa",california,ca,bay area,37.8272,-122.2913
+"dove canyon, california, usa",california,ca,dove canyon,33.6385,-117.5704
+"encino, california, usa",california,ca,encino,34.1593,-118.5012
+"granada hills, california, usa",california,ca,granada hills,34.2793,-118.5021
+"la jolla, california, usa",california,ca,la jolla,32.8328,-117.2713
+"montrose, california, usa",california,ca,montrose,34.2286,-118.2351
+"newbury park, california, usa",california,ca,newbury park,34.1805,-118.9071
+"northridge, california, usa",california,ca,northridge,34.2355,-118.5361
+"pinon hills, california, usa",california,ca,pinon hills,34.4262,-117.6264
+"sherman oaks, california, usa",california,ca,sherman oaks,34.1509,-118.4487
+"studio city, california, usa",california,ca,studio city,34.1436,-118.3953
+"sun city, california, usa",california,ca,sun city,33.7092,-117.1973
+"ventura, california, usa",california,ca,ventura,34.2808,-119.2931
+"ellington, connecticut, usa",connecticut,ct,ellington,41.9173,-72.4582
+"groton, connecticut, usa",connecticut,ct,groton,41.3482,-72.0787
+"manchester, connecticut, usa",connecticut,ct,manchester,41.7759,-72.5215
+"morris, connecticut, usa",connecticut,ct,morris,41.6836,-73.1994
+"new milford, connecticut, usa",connecticut,ct,new milford,41.577,-73.4085
+"oxford, connecticut, usa",connecticut,ct,oxford,41.4472,-73.1368
+"stratford, connecticut, usa",connecticut,ct,stratford,41.1845,-73.1332
+"wallingford, connecticut, usa",connecticut,ct,wallingford,41.4567,-72.8241
+"westport, connecticut, usa",connecticut,ct,westport,41.1414,-73.3581
+"ft myers beach, florida, usa",florida,fl,ft myers beach,26.452,-81.9481
+"ft. pierce, florida, usa",florida,fl,ft. pierce,27.447,-80.326
+"lake forest, florida, usa",florida,fl,lake forest,33.6469,-117.6861
+"lake worth, florida, usa",florida,fl,lake worth,26.6168,-80.0684
+"bonaire, georgia, usa",georgia,ga,bonaire,32.5438,-83.596
+"ft. stewart, georgia, usa",georgia,ga,ft. stewart,31.8691,-81.609
+"merrick, acworth, new york, georgia, usa",georgia,ga,new york,34.00116,-84.4521
+"kamuela, hawaii, usa",hawaii,hi,kamuela,20.0204,-155.6689
+"mililani, hawaii, usa",hawaii,hi,mililani,21.4513,-158.0153
+"mt.view, hawaii, usa",hawaii,hi,mt.view,19.5306,-155.1316
+", illinois, usa",illinois,il,,40.6331,-89.3985
+"boone county, kentucky, usa",kentucky,ky,boone county,38.9941,-84.7316
+"brookline, massachusetts, usa",massachusetts,ma,brookline,42.3318,-71.1212
+"charlestown, massachusetts, usa",massachusetts,ma,charlestown,42.3787,-71.0616
+"marshfield, massachusetts, usa",massachusetts,ma,marshfield,42.0919,-70.7103
+"north reading, massachusetts, usa",massachusetts,ma,north reading,42.5751,-71.0787
+"shrewsbury, massachusetts, usa",massachusetts,ma,shrewsbury,42.2913,-71.7211
+"sudbury, massachusetts, usa",massachusetts,ma,sudbury,42.3834,-71.4162
+"walpole, massachusetts, usa",massachusetts,ma,walpole,42.147,-71.2521
+"wilmington, massachusetts, usa",massachusetts,ma,wilmington,42.5482,-71.1724
+"hollywood, maryland, usa",maryland,md,hollywood,38.3459,-76.5719
+"nottingham, maryland, usa",maryland,md,nottingham,39.3701,-76.4545
+"livermore, maine, usa",maine,me,livermore,37.6819,-121.7685
+"scarborough, maine, usa",maine,me,scarborough,43.5901,-70.3345
+"clinton twp., michigan, usa",michigan,mi,clinton twp.,42.6001,-82.9321
+"fair haven, michigan, usa",michigan,mi,fair haven,42.6804,-82.6581
+"macomb, michigan, usa",michigan,mi,macomb,42.6652,-82.9286
+"redford, michigan, usa",michigan,mi,redford,42.3996,-83.2959
+"saint clair, michigan, usa",michigan,mi,saint clair,42.8209,-82.486
+"waterford, michigan, usa",michigan,mi,waterford,42.6601,-83.3862
+"saint paul, minnesota, usa",minnesota,mn,saint paul,44.9537,-93.09
+"o`fallon, missouri, usa",missouri,mo,o`fallon,38.8106,-90.6998
+"pittsburg, missouri, usa",missouri,mo,pittsburg,37.8354,-93.2987
+"saint louis, missouri, usa",missouri,mo,saint louis,38.627,-90.1994
+"st louis, missouri, usa",missouri,mo,st louis,38.627,-90.1994
+"hooksett, new hampshire, usa",newhampshire,nh,hooksett,43.0463,-71.4365
+"merrimack, new hampshire, usa",newhampshire,nh,merrimack,42.8667,-71.4935
+"bloomfield, new jersey, usa",newjersey,nj,bloomfield,40.8108,-74.1864
+"brick, new jersey, usa",newjersey,nj,brick,40.0607,-74.1406
+"bridgeton, new jersey, usa",newjersey,nj,bridgeton,39.427,-75.2342
+"carneys point, new jersey, usa",newjersey,nj,carneys point,39.7064,-75.4701
+"cliffwood, new jersey, usa",newjersey,nj,cliffwood,40.4373,-74.239
+"freehold, new jersey, usa",newjersey,nj,freehold,40.2214,-74.2674
+"haddonfield, new jersey, usa",newjersey,nj,haddonfield,39.8982,-75.0317
+"hi nella, new jersey, usa",newjersey,nj,hi nella,39.8366,-75.02
+"howell, new jersey, usa",newjersey,nj,howell,40.14,-74.2251
+"livingston, new jersey, usa",newjersey,nj,livingston,40.7824,-74.3151
+"monroe twp., new jersey, usa",newjersey,nj,monroe twp.,40.3209,-74.4522
+"montclair, new jersey, usa",newjersey,nj,montclair,40.8168,-74.2212
+"nj, new jersey, usa",newjersey,nj,nj,40.0583,-74.4057
+"rockaway, new jersey, usa",newjersey,nj,rockaway,40.9022,-74.514
+"upper township, new jersey, usa",newjersey,nj,upper township,39.2086,-74.7042
+"albq, new mexico, usa",newmexico,nm,albq,35.0844,-106.6504
+"fairview, new mexico, usa",newmexico,nm,fairview,36.0097,-106.0645
+"astoria, new york, usa",newyork,ny,astoria,40.7644,-73.9235
+"central sq., new york, usa",newyork,ny,central sq.,43.2867,-76.146
+"hyde park, new york, usa",newyork,ny,hyde park,41.7847,-73.9333
+"lake george, new york, usa",newyork,ny,lake george,43.4262,-73.7123
+"niskayuna, new york, usa",newyork,ny,niskayuna,42.8056,-73.8772
+"perry, new york, usa",newyork,ny,perry,42.7156,-78.0056
+"riverdale, new york, usa",newyork,ny,riverdale,40.8996,-73.9088
+"upstate, new york, usa",newyork,ny,upstate,42.6697,-73.7485
+"webster, new york, usa",newyork,ny,webster,43.2123,-77.43
+"west falls, new york, usa",newyork,ny,west falls,42.7042,-78.6812
+"akron,, ohio, usa",ohio,oh,,41.0812,-81.5188
+"clevelad, ohio, usa",ohio,oh,clevelad,41.4993,-81.6944
+"columbus (grandview heights), ohio, usa",ohio,oh,columbus (grandview heights),39.9798,-83.0407
+"gahanna/columbus, ohio, usa",ohio,oh,gahanna/columbus,40.0192,-82.8793
+"elk  city, oklahoma, usa",oklahoma,ok,elk  city,35.412,-99.4043
+"coal township, pennsylvania, usa",pennsylvania,pa,coal township,40.7927,-76.5641
+"paradise, pennsylvania, usa",pennsylvania,pa,paradise,40.0098,-76.1286
+"cordova, tennessee, usa",tennessee,tn,cordova,35.1598,-89.7615
+"kingwood, texas, usa",texas,tx,kingwood,30.0501,-95.1846
+"sabine pass, texas, usa",texas,tx,sabine pass,29.7333,-93.8948
+"salt lake, utah, usa",utah,ut,salt lake,40.7606,-111.8881
+"barren springs, virginia, usa",virginia,va,barren springs,36.9082,-80.8006
+"nova, virginia, usa",virginia,va,nova,38.8051,-77.047
+"potomac falls, virginia, usa",virginia,va,potomac falls,39.0365,-77.4002
+"wirtz, virginia, usa",virginia,va,wirtz,37.0769,-79.8902
+"castleton, vermont, usa",vermont,vt,castleton,43.6084,-73.2084
+"center rutland, vermont, usa",vermont,vt,center rutland,43.6106,-72.9726
+"independence, west virginia, usa",westvirginia,wv,independence,39.3931,-79.8717
+"ona, west virginia, usa",westvirginia,wv,ona,38.425,-82.213
+"saint albans, west virginia, usa",westvirginia,wv,saint albans,38.3794,-81.8192
