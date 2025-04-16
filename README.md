@@ -88,17 +88,17 @@ Integrate the 3 data files and explore and assess the structure, completeness, a
 
 ## 🧭 Results/Learnings
 - **📊 Exploratory Data Analysis (EDA)**
-  - Many of the readers that provided valid ages were "Early Adults" ages 26-40. I dropped over a quarter of user interactions that did not have a valid age.  In the baseline cluster analysis, the mean of age only varied about 2.5 years between the clusters.
+  - While the dataset included a wide age range of users, most users fell into a small band, ages 25-40.  In the baseline cluster analysis, the mean age of each cluster only varied about 2.5 years.
   - A significant portion of user interactions in the dataset lack explicit feedback — 63% of ratings are zero (647k/1031k), indicating implicit interactions or unrated activity. This means that fewer than half of all book interactions result in a true rating (1–10).
-  - Since the vast majority of readers are from the US, I focused the analysis on U.S. users to reduce geographic imbalance. This also allowed me to use latitude and longitude for US cities for meaningful location-based clustering.
-  - Interestingly, the most read book was "Wild Animus" by Rich Shapero despite the fact that it had mediocre rating of 4.4/10.  This book has an interesting [backstory](https://litreactor.com/columns/what-the-hell-is-wild-animus).  I may want to filter out these records in the future.
+  - Since the vast majority of readers are from the US, I focused the analysis on U.S. users. This also allowed me to utilize latitude and longitude for US cities for meaningful location-based clustering.
+  - Interestingly, the most read book was "Wild Animus" by Rich Shapero despite the fact that it had mediocre rating of 4.4/10.  This book has an interesting [backstory](https://litreactor.com/columns/what-the-hell-is-wild-animus).  I may want to exclude these records in the future.
   ![My Image](images/exploratory_histograms.png)
   ![My Image](images/Top50Distributions.png)
 
 - **🎯 Cluster Analysis Baseline K-Means Model**
   - The sillouette score of the baseline model is .403 with k=3.  This is a decent score but >88% of users are in a single cluster.
-  - At k=4, the sillouette score drops to .144.  The largest cluster contains 66% of users.
-  - The PCA projection (for k=4) reveals that most user clusters are relatively close together, with limited visual separation. This suggests that the clusters may capture subtle variations in user behavior rather than strongly distinct personas. 
+  - At k=4, the sillouette score drops to .144 indicating limited separation.  The largest cluster contains 66% of users.
+  - The PCA projection (for k=4) confirms that most user clusters are relatively close together, with limited visual separation. This suggests that the clusters may capture subtle variations in user behavior rather than strongly distinct personas. 
  ![My Image](images/userclustersviaPCA.png)
 
 ### 🧠 Cluster Summary & Personas
