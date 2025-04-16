@@ -164,8 +164,8 @@ Integrate the 3 data files and explore and assess the structure, completeness, a
 - **Hyperparameter Tuning**  
   Optimize the number of clusters (`k`) using grid search, test against different feature subsets.
 
-- **Cluster Profiling**  
-  Add richer profiling of clusters to support clearer persona labels and potential recommendations to various stakeholder groups.
+- **Cluster Profiling & Recommendation Development**  
+  Add richer profiling of clusters to support clearer persona labels and development of recommendations to various stakeholder groups.
 
 - **Downstream Applications**  
   Explore opportunities to experiment utilizing the holdout data set and new learnings.
