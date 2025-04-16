@@ -112,7 +112,7 @@ Integrate the 3 data files and explore and assess the structure, completeness, a
 
 ---
 
-### ✍️ Persona Descriptions
+### ✍️ Persona Descriptions (in order of prevelance)
 
 - **📚 Casual Browsers (Cluster 1)**  
   The largest group, representing two-thirds of users. They read infrequently but have relatively high author diversity, suggesting wide but shallow exploration. Their preferences include mainstream authors like Dan Brown and books from the 2000s.
