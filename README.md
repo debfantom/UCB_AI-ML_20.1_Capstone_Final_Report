@@ -115,7 +115,7 @@ Integrate the 3 data files and explore and assess the structure, completeness, a
 ### ✍️ Persona Descriptions
 
 - **📚 Casual Browsers (Cluster 1)**  
-  The largest group, representing two-thirds of users. They read infrequently but have relatively high author and publisher diversity, suggesting wide but shallow exploration. Their preferences include mainstream authors like Dan Brown and books from the 2000s.
+  The largest group, representing two-thirds of users. They read infrequently but have relatively high author diversity, suggesting wide but shallow exploration. Their preferences include mainstream authors like Dan Brown and books from the 2000s.
   - **Theme**: *Book Club Readers & Escapists*  
      - **Interest Words**: life, mystery, guide, love, time, classic, club  
      - **Favorite Words**: life, club, mystery, time, love, woman  
