@@ -3,7 +3,7 @@
 **Author** Debra Fant
 ---
 This repository contains:
-- **book_xclustering_Final_Report.ipynb**: Jupyter Notebook containing exploratory data analysis, feature engineering, model comparison, and tuning and final report.
+- **book_xclustering_Final_Report.ipynb**: Jupyter Notebook containing exploratory data analysis, feature engineering, model comparison, hyperparameter tuning and final report and recommendations.
 - **data/**: Folder containing the datasets used in this project. 
 - **images/**: Folder with generated plots and visualizations.
 - **APPENDIX**:
