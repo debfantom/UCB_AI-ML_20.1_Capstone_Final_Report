@@ -18,7 +18,7 @@ This project investigates how user behavior around book ratings can be used to u
 ## ❓ Research Question
 Can we cluster users based on interpretable features extracted from their book rating behavior to uncover distinct reader segments?
 
-**Hypothesis**: By clustering users using features derived from their book ratings and basic profile attributes, we can identify distinct, interpretable user segments. These segments will reflect real differences in reading habits, preferences, and engagement — enabling more personalized content, product features, and marketing strategies.
+**Hypothesis**: By clustering users utilizing features derived from their book ratings and basic profile attributes, we can identify distinct, interpretable user segments. These segments will reflect real differences in reading habits, preferences, and engagement — enabling more personalized content, product features, and marketing strategies.
 
 
 ## 💾 Data Sources 
@@ -139,6 +139,8 @@ $$
 
 with **usable clusters** defined as containing at least 5% of users and no more than 90% of users.  If a model did not result in at least 2 useable_clusters, it was ignored and skipped.
 
+---
+
 #### 🔧 Hyperparameter Tuning Results
 The most performant model for our purposes ended up being KMeans with n_clusters = 6 and significantly more efficient training time compared to Agglomerative models which took ~10x longer to train.
 
@@ -157,7 +159,7 @@ The most performant model for our purposes ended up being KMeans with n_clusters
 ## 🧪 Hypotheses Review
 
 #### Hypothesis:
-By clustering users using features derived from their book ratings and basic profile attributes, we can identify distinct, interpretable user segments. These segments will reflect real differences in reading habits, preferences, and engagement — enabling more personalized content, product features, and marketing strategies.
+By clustering users utilizing features derived from their book ratings and basic profile attributes, we can identify distinct, interpretable user segments. These segments will reflect real differences in reading habits, preferences, and engagement — enabling more personalized content, product features, and marketing strategies.
 
 #### Results:  Partially Supported
 While the clustering did not yield strongly **distinct** user groups in a strict statistical sense, it did uncover **interpretable segments** with meaningful differences in engagement, preferences, and reading behavior. These personas provided valuable insight and unlocked ideas for personalized experiences that could support key business objectives such as engagement, retention, and targeted recommendations. As such, the outcome is considered directionally successful and strategically useful.
