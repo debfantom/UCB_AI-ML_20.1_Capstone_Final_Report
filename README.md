@@ -140,7 +140,8 @@ $$
 with **usable clusters** defined as containing at least 5% of users and no more than 90% of users.  If a model did not result in at least 2 useable_clusters, it was ignored and skipped.
 
 #### 🔧 Hyperparameter Tuning Results
-The most performant model for our purposes ended up being KMeans with n_clusters = 6.
+The most performant model for our purposes ended up being KMeans with n_clusters = 6 and significantly more efficient training time compared to Agglomerative models which took ~10x longer to train.
+
 | Model         | n_clusters | Linkage | Silhouette | Usable Clusters | Training Time (s) | Balance Score | Utility Score | Cluster Proportions                            |
 |---------------|------------|---------|-------------|------------------|-------------------|----------------|----------------|-------------------------------------------------|
 | KMeans        | 6          | None    | 0.144       | 4                | 3.434             | 0.855          | 0.476          | {5: 0.325, 1: 0.282, 0: 0.073, 4: 0.0, 3: 0.0, 2: 0.319} |
@@ -150,6 +151,16 @@ The most performant model for our purposes ended up being KMeans with n_clusters
 | KMeans        | 4          | None    | 0.136       | 2                | 3.266             | 0.757          | 0.380          | {1: 0.492, 3: 0.014, 2: 0.0, 0: 0.493}                   |
 | Agglomerative | 7          | ward    | 0.151       | 3                | 44.208            | N/A            | 0.355          | {2: 0.58, 4: 0.248, 6: 0.104, 5: 0.045, 1: 0.021, 0: 0.0, 3: 0.0} |
 | Agglomerative | 6          | ward    | 0.168       | 2                | 44.162            | N/A            | 0.309          | {0: 0.685, 4: 0.248, 5: 0.045, 1: 0.021, 2: 0.0, 3: 0.0}           |
+
+---
+
+## 🧪 Hypotheses Review
+
+#### Hypothesis:
+By clustering users using features derived from their book ratings and basic profile attributes, we can identify distinct, interpretable user segments. These segments will reflect real differences in reading habits, preferences, and engagement — enabling more personalized content, product features, and marketing strategies.
+
+#### Results:  Partially Supported
+While the clustering did not yield strongly **distinct** user groups in a strict statistical sense, it did uncover **interpretable segments** with meaningful differences in engagement, preferences, and reading behavior. These personas provided valuable insight and unlocked ideas for personalized experiences that could support key business objectives such as engagement, retention, and targeted recommendations. As such, the outcome is considered directionally successful and strategically useful.
 
 ---
 
