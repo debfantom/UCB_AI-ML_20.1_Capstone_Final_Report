@@ -122,51 +122,106 @@ $$
  ![My Image](images/userclustersviaPCA.png)
 
 
-### 🧠 Cluster Summary & Personas
+### 🧠 Cluster Summary & Personas 
+NOTE: Excludes clusters 3 and 4 (both <0.1% of users) 
 
-| Cluster | % of Users | Avg Age | Read Count | Rated High Count | Avg Rating | Author Diversity | Publisher Diversity | Favorite Era | Favorite Author | Most Read Book     | Persona Name        |
-|--------:|------------|--------:|------------|------------------:|------------:|------------------:|---------------------:|--------------|-----------------|----------------------|---------------------|
-| 1       | 66.0%      | 38.04   | 4.98       | 1.64              | 7.78        | 0.98             | 0.96                | 2000s        | Dan Brown       | A Painted House     | 📚 **Casual Browsers** |
-| 3       | 24.0%      | 36.80   | 1.81       | 0.00              | 3.28        | 0.99             | 0.99                | 2000s        | Rich Shapero    | Wild Animus         | 🌱 **Disconnected Dabblers** |
-| 0       | 9.7%       | 36.31   | 100.95     | 20.82             | 7.79        | 0.70             | 0.54                | 1990s        | Stephen King    | 1st to Die: A Novel | 🔍 **Engaged Explorers** |
-| 2       | 0.3%       | 39.09   | 1621.58    | 165.51            | 7.97        | 0.65             | 0.23                | 1990s        | Nora Roberts    | 1984                | 📖 **Super Readers** |
+| C | % Users | Read Count | Rated High Count | Avg Rating | Author Diversity | Favorite Era | Favorite Authors                         | Most Read Books                                               | Persona Name             |
+|---:|--------|------------|------------------|------------|------------------|---------------|------------------------------------------|----------------------------------------------------------------|--------------------------|
+| 0  | 7.3%   | 41.76      | 26.38            | 7.82       | 0.68             | 1990s         | Janet Evanovich, Dean R. Koontz, Stephen King | A Painted House, Beloved, A Bend in the Road                | 🔁 The Loyal Devourer     |
+| 1  | 28.2%  | 2.88       | 1.60             | 7.59       | 0.99             | 1990s         | Alice Sebold, John Grisham, Barbara Kingsolver | A Painted House, The Lovely Bones, 1st to Die               | 💬 The Sentimental Curator |
+| 2  | 31.9%  | 2.86       | 1.57             | 7.53       | 0.99             | 1990s         | Stephen King, John Grisham, James Patterson   | A Painted House, The Lovely Bones, A Child Called "It"      | 👁️ The Thrill Seeker      |
+| 5  | 32.6%  | 2.97       | 1.69             | 7.69       | 0.99             | 1990s         | Barbara Kingsolver, Dean R. Koontz, Nora Roberts | A Bend in the Road, A Heartbreaking Work..., A Child Called "It" | 🌍 The Curious Explorer     |
+
+
+---
+### ✍️ Persona Descriptions (in order of prevelance) & Strategy Recommendations
+
+### 🌍 **The Curious Explorer (Cluster 5)** 
+
+> 🌱 “I explore new voices and ideas, but I don’t stay long — I sample and move on.”
+
+* **Users:** 10,139 (32.6%)
+* **Books Read (avg):** 2.97
+* **Top Authors:** Barbara Kingsolver, Dean R. Koontz, Nora Roberts
+* **Most Read Books:** *A Bend in the Road*, *A Heartbreaking Work of Staggering Genius*, *A Child Called 'It'*
+* **Top Interest Title Words:** `life`, `mystery`, `love`, `classic`, `club`
+* **Top Favorite Title Words:** `life`, `classic`, `world`, `woman`, `guide`
+
+**Behavioral Traits:**
+Light readers with globally curious, socially reflective interests. Sample widely, value perspective.
+
+**💡 Strategy Recommendation:**
+
+* Promote globally relevant or award-winning titles
+* Offer “worldview expanding” collections or challenges
+* Use discovery-based messaging (e.g., “Expand your bookshelf”)
 
 ---
 
-### ✍️ Persona Descriptions (in order of prevelance)
+### 👻 **The Thrill Seeker (Cluster 2)**
 
-- **📚 Casual Browsers (Cluster 1)**  
-  The largest group, representing two-thirds of users. They read infrequently but have relatively high author diversity, suggesting wide but shallow exploration. Their preferences include mainstream authors like Dan Brown and books from the 2000s.
-  - **Theme**: *Book Club Readers & Escapists*  
-     - **Interest Words**: life, mystery, guide, love, time, classic, club  
-     - **Favorite Words**: life, club, mystery, time, love, woman  
-  - **Profile**: Light but curious readers leaning toward popular, accessible books often found in book clubs or lifestyle picks.
-  
+> 👁️ “I’m into big names and dark stories — thrillers, crime, and dramatic plots.”
 
-- **🌱 Disconnected Dabblers (Cluster 3)**  
-  Representing about one-quarter of users, this group has the lightest engagement with the lowest read and rating counts. Average ratings are low (3.28), possibly due to confusion, ambivalence, or non-engagement. Their most read book is the niche "Wild Animus" by Rich Shapero which purportedly was a Book Crossing give-a-way.
-  - **Theme**: *Experimental Samplers*
-    - **Interest Words**: mystery, love, romance, woman, guide, story, world  
-    - **Favorite Words**: mystery, guide, love, novel, world, time, secret, classic
-  - **Profile**: Sporadic readers exploring niche or abstract titles with limited rating engagement or clear preferences.
+* **Users:** 9,946 (31.9%)
+* **Books Read (avg):** 2.9
+* **Top Authors:** Stephen King, John Grisham, James Patterson
+* **Most Read Books:** *A Painted House*, *The Lovely Bones*, *A Child Called 'It'*
+* **Top Interest Title Words:** `mystery`, `romance`, `series`, `hardcover`, `love`, `death`
+* **Top Favorite Title Words:** `mystery`, `series`, `romance`, `death`, `history`, `love`
 
+**Behavioral Traits:**
+Drawn to dark, high-drama fiction by popular authors. Engages lightly but consistently with high-profile content.
 
-- **🔍 Engaged Explorers (Cluster 0)**  
-  Small but active group, reading around 100 books and rating many with high scores. They explore broadly (moderate diversity) and enjoy 1990s-era books and authors like Stephen King.
-  - **Theme**: *Classic Story Seekers*    
-    - **Interest Words**: mystery, love, romance, woman, guide, story, world  
-    - **Favorite Words**: mystery, guide, love, novel, world, time, secret, classic  
-  - **Profile**: Avid readers of narrative-rich fiction, especially mystery and romance. Favor classic, emotionally engaging titles.
+**💡 Strategy Recommendation:**
 
-- **📖 Super Readers (Cluster 2)**  
-  A rare but standout group—only 0.3% of users—who exhibit extreme engagement: reading over 1,600 books and rating more than 160 highly. Their preferences are tightly focused (low diversity), with high affinity for authors like Nora Roberts and iconic titles like *1984*.
-  - **Theme**: *Romance Devotees* 
-    - **Interest Words**: mystery, love, romance, story, silhouette, book  
-    - **Favorite Words**: mystery, guide, classic, love, tale, world, book  
-  - **Profile**: Exceptionally high-volume readers with strong affinity for romantic and serialized fiction.
+* Surface trending thrillers and crime fiction
+* Feature suspense bundles or “like Stephen King?” tracks
+* Use high-urgency copy in re-engagement messaging
+
+--- 
+
+### 📖 **The Sentimental Curator (Cluster 1)**
+
+> 💬 “I want emotional, literary stories that stay with me — even if I only read a few.”
+
+* **Users:** 8,777 (28.2%)
+* **Books Read (avg):** 2.9
+* **Top Authors:** Alice Sebold, John Grisham, Barbara Kingsolver
+* **Most Read Books:** *A Painted House*, *The Lovely Bones*, *1st to Die*
+* **Top Interest Title Words:** `life`, `mystery`, `woman`, `guide`, `love`
+* **Top Favorite Title Words:** `life`, `classic`, `woman`, `american`, `time`
+
+**Behavioral Traits:**
+Emotionally selective and values literary quality. Explores occasionally but intentionally.
+
+**💡 Strategy Recommendation:**
+
+* Promote titles with strong emotional hooks
+* Offer curated lists like “Stories That Stay With You”
+* Create personalized mini-challenges (e.g., 3 books in 3 months)
 
 ---
----
+### 🧑‍💼 **The Loyal Devourer (Cluster 0)**
+
+> 🧭 “I read a lot and stick with what I know — mystery, life stories, and trusted authors.”
+
+* **Users:** 2,282 (7.3%)
+* **Books Read (avg):** 41.8
+* **Top Authors:** Janet Evanovich, Dean R. Koontz, Stephen King
+* **Most Read Books:** *A Painted House*, *Beloved*, *A Bend in the Road*
+* **Top Interest Title Words:** `mystery`, `life`, `guide`, `love`, `series`, `woman`
+* **Top Favorite Title Words:** `life`, `mystery`, `series`, `potter`, `love`, `classic`
+
+**Behavioral Traits:**
+Reads heavily and loyally — drawn to mystery and emotionally rich fiction, often from trusted series authors.
+
+**💡 Strategy Recommendation:**
+
+* Highlight next-in-series and favorite-author alerts
+* Offer “reading streak” challenges or loyalty badges
+* Personalize feeds with author collections and lifetime stats
+
+
 
 
 
