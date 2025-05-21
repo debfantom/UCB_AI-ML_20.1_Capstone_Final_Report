@@ -116,10 +116,11 @@ $$
   ![My Image](images/Top50Distributions.png)
 
 - **🎯 Cluster Analysis Baseline K-Means Model**
-  - The sillouette score of the baseline model is .403 with k=3.  This is a decent score but >88% of users are in a single cluster.
-  - At k=4, the sillouette score drops to .144 indicating limited separation.  The largest cluster contains 66% of users.
+  - The sillouette score of the baseline model after final feature engineering  and adjustments is .481 with k=3.  This is a decent score but >91% of users are in a single cluster which is not very useful.
+  - At k=4, the sillouette score drops to .136 indicating limited separation.  Two of the clusters are pretty balanced at 49% each which is useful, while the other two clusters have minimal users and are not useful.
   - The PCA projection (for k=4) confirms that most user clusters are relatively close together, with limited visual separation. This suggests that the clusters may capture subtle variations in user behavior rather than strongly distinct personas. 
  ![My Image](images/userclustersviaPCA.png)
+
 
 ### 🧠 Cluster Summary & Personas
 
