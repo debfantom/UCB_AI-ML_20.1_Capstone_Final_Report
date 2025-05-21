@@ -7,6 +7,7 @@ This repository contains:
 - **data/**: Folder containing the datasets used in this project. 
 - **images/**: Folder with generated plots and visualizations.
 - **APPENDIX**:
+   - **README_20.1_Initial_Report_EDA.md**: The initial report and EDA readme file.
    - **book_xclustering_Initial_Report_EDA.ipynb**: Jupyter Notebook containing exploratory data analysis, feature engineering and an initial baseline Kmeans model.
 ---
 ## 🧠 Executive Summary
