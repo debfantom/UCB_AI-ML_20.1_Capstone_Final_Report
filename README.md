@@ -1,11 +1,13 @@
-# UCB_AI-ML_20.1_Capstone_Initial_Report_EDA
+# UCB_AI-ML_24.1_Capstone_Final_Report
 
 **Author** Debra Fant
 ---
 This repository contains:
-- **book_clustering_EDA.ipynb**: Jupyter Notebook containing exploratory data analysis, feature engineering, model comparison, and tuning.
+- **book_xclustering_Final_Report.ipynb**: Jupyter Notebook containing exploratory data analysis, feature engineering, model comparison, and tuning and final report.
 - **data/**: Folder containing the datasets used in this project. 
 - **images/**: Folder with generated plots and visualizations.
+- **APPENDIX**:
+   - **book_xclustering_Initial_Report_EDA.ipynb**: Jupyter Notebook containing exploratory data analysis, feature engineering.
 ---
 ## 🧠 Executive Summary
 This project investigates how user behavior around book ratings can be used to uncover distinct groups of readers using unsupervised learning. The focus is on clustering users into interpretable segments to enable more personalized book recommendations and strategic content targeting.
@@ -16,7 +18,7 @@ This project investigates how user behavior around book ratings can be used to u
 ## ❓ Research Question
 Can we cluster users based on interpretable features extracted from their book rating behavior to uncover distinct reader segments?
 
-**Hypothesis**: It is possible to uncover meaningful and interpretable user segments by clustering users based on book rating behavior and available profile information. These segments can reveal distinct patterns in engagement, preferences, and interest, supporting more targeted content, product, and marketing strategies.
+**Hypothesis**: By clustering users using features derived from their book ratings and basic profile attributes, we can identify distinct, interpretable user segments. These segments will reflect real differences in reading habits, preferences, and engagement — enabling more personalized content, product features, and marketing strategies.
 
 
 ## 💾 Data Sources 
@@ -52,19 +54,37 @@ Integrate the 3 data files and explore and assess the structure, completeness, a
     - `interest_title_words` (all books)
     - `fav_title_words` (books rated > 7)
   - Favorite author/publisher (mode or frequency)
+  - After initial review
+    * Removed "Wild Animus" records (promotional anomaly)
+    * Removed unrated (0) interactions
+    * Excluded some fields from clustering to reduce dimentionality but retained for profiling
+    * **TF-IDF vectors retained** for profiling interest/favorite title words
+    * Switched to **SBERT embeddings** for clustering on book titles to improve semantic richness
 - Optionally split the dataset (e.g., 80/20) to reserve a portion for future prediction experiments.
 
 
 **4. Modeling**  
 - Use clustering techniques (ie KMeans) to cluster users based on behavioral and demographic features
+ * Expanded to include:
+    * `AgglomerativeClustering` with multiple linkages
+    * `DBSCAN` (tested but not tuned; instability and dense parameter sensitivity)
+ * Hyperparameter tuning performed for:
+    * `KMeans` (`k` range with silhouette + custom utility score)
+    * `AgglomerativeClustering` (`k` + linkage types)
 - Apply dimensionality reduction (PCA) for visualization only
 - Evaluate interpretability and separation of clusters
 
 
 **5. Evaluation**  
-- Silhouette Score to guide K choice
-- Distribution analysis of users across clusters
-- Interpretability based on key features per segment
+- Goals:
+  - Silhouette Score to guide K choice
+  - Distribution analysis of users across clusters
+  - Interpretability based on key features per segment
+- To balance the above goals, clustering models were evaluated using a **custom utility score** to balance statistical quality and real-world usefulness:
+
+$$
+\text{Utility Score} = 0.4 \times \text{Silhouette Score} + 0.1 \times \text{Balance Score} + 0.5 \times \left(\frac{\text{Usable Clusters}}{k}\right)
+$$
 
 
 **6. Deployment / Insights**  
@@ -81,8 +101,8 @@ Integrate the 3 data files and explore and assess the structure, completeness, a
 - **Text Processing**: `re`, `collections.Counter`, `nltk` (`stopwords`, `WordNetLemmatizer`)  
 - **Modeling & Feature Engineering (scikit-learn)**:  
   - Preprocessing: `StandardScaler`, `OneHotEncoder`, `TfidfVectorizer`  
-  - Workflow: `Pipeline`, `ColumnTransformer`, `train_test_split`  
-  - Clustering & Evaluation: `KMeans`, `PCA`, `silhouette_score`
+  - Workflow: `Pipeline`, `ColumnTransformer`, `SentenceTransformer`, `train_test_split`  
+  - Clustering & Evaluation: `KMeans`, `DBSCAN`, `AgglomerativeClustering`, `PCA`, `silhouette_score`, 'time'
 
 ---
 
@@ -148,27 +168,6 @@ Integrate the 3 data files and explore and assess the structure, completeness, a
 ---
 
 
-## ✅ Next Steps
-- **Feature Engineering & Filtering Refinement**  
-  - Consider eliminating Age as a modeling feature and allow the additional 25+% of records back into the analysis.  Using age_quality as an indicator of engagement (providing age shows higher engagement/trust than not providing age) could be a more distinctive feature for modeling. Age will still be available for persona analysis.
-  - Alternatively, consider only using records that included an explicite rating if implicite ratings introduce noise. 
-  - Consider eliminating some features that may be redundant (ex: Publisher Diversity).
-  - Consider filtering out "Wild Animus" records and eliminating severe outliers.
-  - Super Reader - Cluster 2 group averaged 1600 books per reader over 4 weeks which warrants further investigation.
-  - Refine the text processing methodology to mine further insight using book titles.  
-
-  
-- **Model Exploration**  
-  Evaluate alternative clustering algorithms such as DBSCAN to compare with KMeans results.
-
-- **Hyperparameter Tuning**  
-  Optimize the number of clusters (`k`) using grid search, test against different feature subsets.
-
-- **Cluster Profiling & Recommendation Development**  
-  Add richer profiling of clusters to support clearer persona labels and development of recommendations to various stakeholder groups.
-
-- **Downstream Applications**  
-  Explore opportunities to experiment utilizing the holdout data set and new learnings.
 
 
 
