@@ -112,14 +112,14 @@ $$
   - A significant portion of user interactions in the dataset lack explicit feedback — 63% of ratings are zero (647k/1031k), indicating implicit interactions or unrated activity. This means that fewer than half of all book interactions result in a true rating (1–10).
   - Since the vast majority of readers are from the US, I focused the analysis on U.S. users. This also allowed me to utilize latitude and longitude for US cities for meaningful location-based clustering.
   - Interestingly, the most read book was "Wild Animus" by Rich Shapero despite the fact that it had mediocre rating of 4.4/10.  This book has an interesting [backstory](https://litreactor.com/columns/what-the-hell-is-wild-animus).  I may want to exclude these records in the future.
-  ![My Image](images/exploratory_histogramsi.png)
-  ![My Image](images/Top50Distributionsi.png)
+  ![My Image](images/exploratory_histograms.png)
+  ![My Image](images/Top50Distributions.png)
 
 - **🎯 Cluster Analysis Baseline K-Means Model**
   - The sillouette score of the baseline model is .403 with k=3.  This is a decent score but >88% of users are in a single cluster.
   - At k=4, the sillouette score drops to .144 indicating limited separation.  The largest cluster contains 66% of users.
   - The PCA projection (for k=4) confirms that most user clusters are relatively close together, with limited visual separation. This suggests that the clusters may capture subtle variations in user behavior rather than strongly distinct personas. 
- ![My Image](images/userclustersviaPCAi.png)
+ ![My Image](images/userclustersviaPCA.png)
 
 ### 🧠 Cluster Summary & Personas
 
