@@ -60,7 +60,7 @@ Integrate the 3 data files and explore and assess the structure, completeness, a
     * Excluded some fields from clustering to reduce dimentionality but retained for profiling
     * **TF-IDF vectors retained** for profiling interest/favorite title words
     * Switched to **SBERT embeddings** for clustering on book titles to improve semantic richness
-- Optionally split the dataset (e.g., 80/20) to reserve a portion for future prediction experiments.
+- Split the dataset (e.g., 80/20) to reserve a portion for future prediction experiments.
 
 
 **4. Modeling**  
