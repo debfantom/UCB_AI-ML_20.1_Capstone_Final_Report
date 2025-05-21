@@ -7,7 +7,7 @@ This repository contains:
 - **data/**: Folder containing the datasets used in this project. 
 - **images/**: Folder with generated plots and visualizations.
 - **APPENDIX**:
-   - **book_xclustering_Initial_Report_EDA.ipynb**: Jupyter Notebook containing exploratory data analysis, feature engineering.
+   - **book_xclustering_Initial_Report_EDA.ipynb**: Jupyter Notebook containing exploratory data analysis, feature engineering and an initial baseline Kmeans model.
 ---
 ## 🧠 Executive Summary
 This project investigates how user behavior around book ratings can be used to uncover distinct groups of readers using unsupervised learning. The focus is on clustering users into interpretable segments to enable more personalized book recommendations and strategic content targeting.
