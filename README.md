@@ -115,14 +115,45 @@ $$
   ![My Image](images/exploratory_histograms.png)
   ![My Image](images/Top50Distributions.png)
 
-- **🎯 Cluster Analysis Baseline K-Means Model**
+ **🎯 Cluster Analysis Baseline K-Means Model**
   - The sillouette score of the baseline model after final feature engineering  and adjustments is .481 with k=3.  This is a decent score but >91% of users are in a single cluster which is not very useful.
   - At k=4, the sillouette score drops to .136 indicating limited separation.  Two of the clusters are pretty balanced at 49% each which is useful, while the other two clusters have minimal users and are not useful.
   - The PCA projection (for k=4) confirms that most user clusters are relatively close together, with limited visual separation. This suggests that the clusters may capture subtle variations in user behavior rather than strongly distinct personas. 
  ![My Image](images/userclustersviaPCA.png)
 
+#### ❗Limitations of Relying Solely on Silhouette Score
 
-### 🧠 Cluster Summary & Personas 
+While silhouette score is a useful metric, I found that **it has important limitations in this context**:
+
+* **Inflated by class imbalance**: High silhouette scores can result when the model assigns nearly all users to a single dominant cluster. In our experiments, configurations with `n_clusters = 2 or 3` and high silhouette scores (0.867–0.979) still placed **over 99% of users into a single cluster** — offering no practical segmentation value.
+
+* **Not sensitive to business value**: A high silhouette does not guarantee actionable segments. From a marketing perspective, **we need multiple, diverse groups** to personalize reading recommendations or campaigns. A “perfect” cluster that contains almost everyone is effectively useless for personalization.
+
+* **Does not penalize empty clusters**: Many configurations produced high silhouette scores but included **0% users in one or more clusters**, which undermines their utility.
+
+* Due to this, I came up with a a **custom utility score** to balance statistical quality and real-world usefulness:
+
+$$
+\text{Utility Score} = 0.4 \times \text{Silhouette Score} + 0.1 \times \text{Balance Score} + 0.5 \times \left(\frac{\text{Usable Clusters}}{k}\right)
+$$
+
+with **usable clusters** defined as containing at least 5% of users and no more than 90% of users.  If a model did not result in at least 2 useable_clusters, it was ignored and skipped.
+
+#### 🔧 Hyperparameter Tuning Results
+The most performant model for our purposes ended up being KMeans with n_clusters = 6.
+| Model         | n_clusters | Linkage | Silhouette | Usable Clusters | Training Time (s) | Balance Score | Utility Score | Cluster Proportions                            |
+|---------------|------------|---------|-------------|------------------|-------------------|----------------|----------------|-------------------------------------------------|
+| KMeans        | 6          | None    | 0.144       | 4                | 3.434             | 0.855          | 0.476          | {5: 0.325, 1: 0.282, 0: 0.073, 4: 0.0, 3: 0.0, 2: 0.319} |
+| KMeans        | 5          | None    | 0.178       | 3                | 3.597             | 0.769          | 0.448          | {1: 0.605, 2: 0.307, 0: 0.086, 4: 0.002, 3: 0.0}         |
+| Agglomerative | 5          | ward    | 0.157       | 3                | 44.054            | N/A            | 0.437          | {1: 0.685, 4: 0.248, 0: 0.067, 2: 0.0, 3: 0.0}           |
+| KMeans        | 7          | None    | 0.158       | 4                | 3.475             | 0.856          | 0.435          | {3: 0.323, 1: 0.28, 2: 0.061, 6: 0.019, 5: 0.0, 4: 0.0, 0: 0.317} |
+| KMeans        | 4          | None    | 0.136       | 2                | 3.266             | 0.757          | 0.380          | {1: 0.492, 3: 0.014, 2: 0.0, 0: 0.493}                   |
+| Agglomerative | 7          | ward    | 0.151       | 3                | 44.208            | N/A            | 0.355          | {2: 0.58, 4: 0.248, 6: 0.104, 5: 0.045, 1: 0.021, 0: 0.0, 3: 0.0} |
+| Agglomerative | 6          | ward    | 0.168       | 2                | 44.162            | N/A            | 0.309          | {0: 0.685, 4: 0.248, 5: 0.045, 1: 0.021, 2: 0.0, 3: 0.0}           |
+
+---
+
+## 🧠 Cluster Summary & Personas 
 NOTE: Excludes clusters 3 and 4 (both <0.1% of users) 
 
 | C | % Users | Read Count | Rated High Count | Avg Rating | Author Diversity | Favorite Era | Favorite Authors                         | Most Read Books                                               | Persona Name             |
